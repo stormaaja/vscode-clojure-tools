@@ -1,0 +1,59 @@
+{
+    "name": "vscode-clj-tools",
+    "displayName": "Clojure Tools",
+    "description": "Various Clojure tools for VSCode",
+    "version": "0.0.1",
+    "publisher": "stormaaja",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stormaaja/vscode-clojure-tools.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Other"
+    ],
+    "keywords": [
+        "clojure"
+    ],
+    "activationEvents": [
+        "onCommand:cljt.addNamespace"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "cljt.addNamespace",
+                "title": "Add current namespace",
+                "category": "CLJT"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "cljt.addNamespace",
+                "key": "ctrl+alt+v shift+n"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "lint": "tslint ./src/*.ts",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.40",
+        "tslint": "^5.16.0",
+        "typescript": "^3.4.5",
+        "@types/vscode": "^1.32.0",
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^5.2.6",
+        "glob": "^7.1.4",
+        "mocha": "^6.1.4",
+        "source-map-support": "^0.5.12",
+        "vscode-test": "^0.4.2"
+    }
+}
