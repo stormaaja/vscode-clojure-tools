@@ -12,8 +12,11 @@ interface FileHeader {
 	requires: FileRequire[]
 }
 
+const cljFileRegex = /.*\.clj(?:s|c)?/g
+
 export function isValidFile(filename: string): boolean {
-	return filename.indexOf("/src/") > -1 || filename.indexOf("/test/") > -1
+	return filename.match(cljFileRegex) !== null &&
+		(filename.indexOf("/src/") > -1 || filename.indexOf("/test/") > -1)
 }
 
 const detectNsType = (filename: string): string =>
@@ -55,7 +58,8 @@ const headerToString = (header: FileHeader): string => {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	let disposable = vscode.commands.registerCommand("cljt.addNamespace", function () {
+	let disposable = vscode.commands.registerCommand(
+		"cljt.addNamespace", function () {
 		let editor = vscode.window.activeTextEditor
 
 		if (editor) {
@@ -65,6 +69,9 @@ export function activate(context: vscode.ExtensionContext) {
 				editor.edit(editBuilder => {
 					editBuilder.insert(new vscode.Position(0, 0), headerToString(header))
 				})
+			} else {
+				vscode.window.showInformationMessage(
+					"Only Clojure(Script) files is supported.")
 			}
 		}
 	})
