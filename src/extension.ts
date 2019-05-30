@@ -54,7 +54,7 @@ const requiresToString = (requires: FileRequire[]): string => {
 }
 
 const headerToString = (header: FileHeader): string => {
-	return `(ns ${header.ns}${requiresToString(header.requires)})\n`
+	return `(ns ${header.ns}${requiresToString(header.requires)})\n\n`
 }
 
 export function activate(context: vscode.ExtensionContext) {
