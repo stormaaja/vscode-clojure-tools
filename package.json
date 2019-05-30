@@ -2,7 +2,7 @@
     "name": "vscode-clj-tools",
     "displayName": "Clojure Tools",
     "description": "Various Clojure tools for VSCode",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "stormaaja",
     "repository": {
         "type": "git",
