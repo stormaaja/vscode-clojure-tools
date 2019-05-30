@@ -17,7 +17,8 @@
         "Other"
     ],
     "keywords": [
-        "clojure"
+        "clojure",
+        "cljtools"
     ],
     "activationEvents": [
         "onCommand:cljt.addNamespace"
