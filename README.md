@@ -5,6 +5,9 @@ Various Clojure tools for VSCode.
 ## Features
 
 + Detect and add file namespace (ctrl+alt+v shift+n)
++ Snippets
+  + Snippets are designe to work with Clojure-code and with parenthesis prepend
+  + Following snippets are added: `let`, `defn`
 
 ## Develop
 

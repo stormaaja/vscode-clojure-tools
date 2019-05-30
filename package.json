@@ -37,7 +37,13 @@
                 "command": "cljt.addNamespace",
                 "key": "ctrl+alt+v shift+n"
             }
-        ]
+        ],
+        "snippets": [
+			{
+				"language": "clojure",
+				"path": "./snippets.json"
+			}
+		]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",

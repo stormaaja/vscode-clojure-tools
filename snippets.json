@@ -1,0 +1,16 @@
+{
+	"Let macro": {
+		"prefix": "(let",
+		"body": [
+			"(let [$1]"
+		],
+		"description": "Create empty let-macro"
+	},
+	"Defn macro": {
+		"prefix": "(defn",
+		"body": [
+			"(defn $1 []"
+		],
+		"description": "Create empty function define"
+	}
+}
