@@ -59,7 +59,7 @@
         "@types/glob": "^7.1.1",
         "@types/mocha": "^5.2.6",
         "glob": "^7.1.4",
-        "mocha": "^6.1.4",
+        "mocha": "^10.2.0",
         "source-map-support": "^0.5.12",
         "vscode-test": "^0.4.2"
     }
